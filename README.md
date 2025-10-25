@@ -24,6 +24,7 @@ Below is a sample `neofetch` capture as embedded by `fwidata`:
   - `--help` / `-h` → usage information  
   - `--version` / `-v` → show version  
   - `--date` / `-d` → print capture date only  
+  - `--quiet` / `-q` → Suppress live output and status messages (useful in login scripts)  
 - **Replay mode**: run `./fwidata` to echo the full captured neofetch snapshot  
 - **Live display**: `fwidata.sh` shows neofetch output while capturing it  
 
