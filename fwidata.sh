@@ -5,13 +5,15 @@
 # Assisted: Microsoft CoPilot
 # Created by fwidata.sh
 
-VERSION="1.1"
+VERSION="1.2"
 
 # Output file
 OUTFILE="fwidata"
 
 # Capture current date in DD/MM/YYYY format
 DATE=$(date +"%d/%m/%Y")
+
+QUIET=false
 
 # Handle switches for fwidata.sh itself
 case "$1" in
@@ -20,11 +22,15 @@ case "$1" in
     echo "Options:"
     echo "  --help, -h     Show this help message"
     echo "  --version, -v  Show version information"
+    echo "  --quiet, -q    Suppress live output (for login scripts)"
     exit 0
     ;;
   --version|-v)
     echo "fwidata.sh version $VERSION"
     exit 0
+    ;;
+  --quiet|-q)
+    QUIET=true
     ;;
 esac
 
@@ -61,8 +67,12 @@ esac
 
 EOF
 
-# Capture neofetch output (with color codes preserved) and show live
-NEO_OUTPUT=$(neofetch | tee /dev/tty)
+# Capture neofetch output
+if [ "$QUIET" = true ]; then
+    NEO_OUTPUT=$(neofetch)
+else
+    NEO_OUTPUT=$(neofetch | tee /dev/tty)
+fi
 
 # Append variable assignment with preserved formatting
 echo "fwidata=\"" >> "$OUTFILE"
@@ -79,4 +89,6 @@ EOF
 # Make the generated file executable
 chmod +x "$OUTFILE"
 
-echo "fwidata script created successfully: $OUTFILE"
+if [ "$QUIET" = false ]; then
+    echo "fwidata script created successfully: $OUTFILE"
+fi
