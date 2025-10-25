@@ -62,7 +62,7 @@ By default, this replays the captured neofetch output.
 .
 ├── fwidata.sh        # Generator script
 ├── fwidata           # Generated snapshot script (after running fwidata.sh)
-└── screencapture.png # Example neofetch output (for README)
+└── Screen Capture.png # Example neofetch output (for README)
 ```
 
 ---
