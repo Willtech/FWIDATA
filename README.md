@@ -1,6 +1,9 @@
 # fwidata.sh
 
 `fwidata.sh` is a Bash utility that generates a companion script called **`fwidata`**.  
+
+It is a "Security tool" so I can know when I logon if I know what it does. And I can create a standard neofetch for my system.
+
 The generated script embeds a live snapshot of your system information (via [neofetch](https://github.com/dylanaraps/neofetch)) along with metadata headers, versioning, and helpful command‑line switches.
 
 This project ritualizes system identity into a **living scroll**: each run captures your machine’s state, authorship, and date of capture.
