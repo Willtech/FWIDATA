@@ -19,6 +19,20 @@ Below is a sample `neofetch` capture as embedded by `fwidata`:
 
 ---
 
+## To Install:
+
+Locate these files.
+`~/fwidata.sh`
+`~/.login`
+`~/.config/autostart/login-launch.desktop`
+
+`chmod +x ~/fwidata.sh`
+`chmod +x ~/.login`
+
+`dnf install git fortune`
+
+---
+
 ## ⚙️ Features
 
 - **Self‑documenting headers** with creator, assistant, and capture date  
