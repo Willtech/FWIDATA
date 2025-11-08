@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Login Script
+Comment=Run ~/.login in terminal
+Exec=gnome-terminal -- bash -c "$HOME/.login; exec bash"
+Terminal=true
+X-GNOME-Autostart-enabled=true
